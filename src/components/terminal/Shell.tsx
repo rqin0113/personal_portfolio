@@ -291,12 +291,12 @@ function Tab({ children }: { children: ReactNode }) {
 function Banner({ runCommand }: { runCommand: (cmd: string) => void }) {
   return (
     <div className="space-y-3 pb-3">
-      <p className="text-bone-100">Hey, I&apos;m Riza.</p>
+      <p className="text-bone-100">Hi there! I&apos;m Riza 😊 </p>
       <p className="max-w-[78ch] text-bone-300">
-        2A Mathematics student @ UWaterloo focused on full-stack development,
-        applied AI engineering, and data science.
+        2A Honours Mathematics student @ University of Waterloo exploring full-stack dev, applied AI, and data science.
       </p>
-      <p className="text-bone-300">Welcome to my terminal portfolio.</p>
+      <p className="text-bone-300">I enjoy building things, learning fast, and turning ideas into real systems. Always open to new opportunities and good conversations! 🤝 </p>
+      <p className="text-bone-300">Welcome to my terminal-inspired portfolio! </p>
       <p className="text-bone-400">
         For a list of available commands, type{" "}
         <button

@@ -36,7 +36,7 @@ export type Ctx = {
   run: (input: string) => void;
 };
 
-export type CommandGroup = "core" | "about" | "work" | "human" | "fun" | "system";
+export type CommandGroup = "core" | "about" | "work" | "personal" | "fun" | "system";
 
 export type Command = {
   name: string;
@@ -81,43 +81,44 @@ function Help({ ctx }: { ctx: Ctx }) {
     { key: "core", label: "core" },
     { key: "about", label: "about" },
     { key: "work", label: "work" },
-    { key: "human", label: "human" },
+    { key: "personal", label: "personal" },
     { key: "system", label: "system" },
   ];
 
+  const sections = groups
+    .map((g) => ({
+      ...g,
+      items: registry.filter((c) => c.group === g.key && !c.hidden),
+    }))
+    .filter((g) => g.items.length > 0);
+
   return (
     <Out>
-      <Echo>available commands</Echo>
-      {groups.map((g) => {
-        const items = registry.filter((c) => c.group === g.key && !c.hidden);
-        if (items.length === 0) return null;
-        return (
-          <div key={g.key} className="pt-1.5">
-            <div className="text-bone-400">{g.label}</div>
-            {items.map((c) => (
-              <div key={c.name} className="whitespace-pre">
-                {"    "}
-                <button
-                  onClick={() => ctx.run(c.name)}
-                  className="text-bone-100 hover:text-accent-cyan"
-                >
-                  {c.name}
-                </button>
-                {" ".repeat(Math.max(2, 22 - c.name.length))}
-                <span className="text-bone-400">{c.hint}</span>
-              </div>
-            ))}
-          </div>
-        );
-      })}
-      <div className="pt-2 text-bone-400">shortcuts</div>
-      <div className="whitespace-pre text-bone-300">
-        {"    tab        autocomplete\n"}
-        {"    ↑ / ↓      command history\n"}
-        {"    ctrl+l     clear screen\n"}
-        {"    ctrl+c     cancel input\n"}
+      {sections.map((g) => (
+        <div key={g.key} className="mt-3 first:mt-0">
+          <div className="text-bone-400">{g.label}:</div>
+          {g.items.map((c) => (
+            <div key={c.name} className="whitespace-pre">
+              {"  "}
+              <button
+                onClick={() => ctx.run(c.name)}
+                className="text-bone-200 hover:text-accent-cyan"
+              >
+                {c.name}
+              </button>
+            </div>
+          ))}
+        </div>
+      ))}
+      <div className="mt-3">
+        <div className="text-bone-400">shortcuts:</div>
+        <div className="whitespace-pre text-bone-300">{"  tab autocomplete"}</div>
+        <div className="whitespace-pre text-bone-300">{"  ↑ / ↓ history"}</div>
+        <div className="whitespace-pre text-bone-300">{"  ctrl+l clear"}</div>
+        <div className="whitespace-pre text-bone-300">{"  ctrl+c cancel"}</div>
       </div>
-      <Echo>type a command to begin. a few are undocumented.</Echo>
+      <div className="mt-3 text-bone-400">type a command to begin</div>
+      <div className="text-bone-400">some commands are hidden</div>
     </Out>
   );
 }
@@ -690,7 +691,10 @@ const baseCommands: Command[] = [
       ),
     }),
   },
+
   // human layer
+
+  /*
   {
     name: "now",
     hint: "what i'm doing right now",
@@ -722,6 +726,8 @@ const baseCommands: Command[] = [
     group: "human",
     run: (_a, ctx) => node(<Life ctx={ctx} />),
   },
+  */
+
   // hidden
   {
     name: "sudo hire-me",
