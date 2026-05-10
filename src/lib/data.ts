@@ -1,16 +1,11 @@
 export const profile = {
   name: "Riza Qin",
-  role: "Software Developer · AI Engineer · Data Analyst",
-  location: "Waterloo, ON",
+  role: "Software Developer | AI Engineer | Data Scientist",
+  location: "Waterloo/Toronto, ON",
   status: "Seeking Fall 2026 Co-op Internships",
-  tagline:
-    "I build intelligent, real-time systems at the edge of research and product.",
-  longBio:
-    "I'm a Mathematics student at the University of Waterloo with a focus on full-stack development, applied AI, and data. My favorite work lives where backend reliability meets fast, expressive UI — model orchestration, data pipelines, real-time inference, and the interfaces that turn them into something a human actually wants to use.",
   email: "r32qin@uwaterloo.ca",
   github: "github.com/rqin0113",
   linkedin: "linkedin.com/in/riza-qin",
-  resume: "/resume.pdf",
 };
 
 export type NavLink = { label: string; href: string; index: string };

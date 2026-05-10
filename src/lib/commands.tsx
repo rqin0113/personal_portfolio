@@ -347,20 +347,6 @@ function Contact() {
           </a>
         }
       />
-      <Field
-        k="resume"
-        v={
-          <a
-            href={profile.resume}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-bone-100 hover:text-accent-cyan"
-          >
-            ./resume.pdf
-          </a>
-        }
-      />
-      <Echo>reply within 24h on weekdays.</Echo>
     </Out>
   );
 }
@@ -463,7 +449,6 @@ function HireMe() {
           }
         />
       </div>
-      <Echo>i reply within 24h.</Echo>
     </Out>
   );
 }
@@ -636,32 +621,6 @@ const baseCommands: Command[] = [
     hint: "open channels",
     group: "work",
     run: () => node(<Contact />),
-  },
-  {
-    name: "resume",
-    aliases: ["cv"],
-    hint: "open resume.pdf",
-    group: "work",
-    run: () => ({
-      kind: "open",
-      url: profile.resume,
-      node: (
-        <Out>
-          <Echo>
-            opening{" "}
-            <a
-              href={profile.resume}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent-cyan hover:underline"
-            >
-              ./resume.pdf
-            </a>
-            …
-          </Echo>
-        </Out>
-      ),
-    }),
   },
   {
     name: "github",
