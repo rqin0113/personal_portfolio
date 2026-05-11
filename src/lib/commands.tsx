@@ -339,6 +339,7 @@ function Contact() {
 
 function Hobbies() {
   const [mbtiRevealed, setMbtiRevealed] = useState(false);
+  const [curlingPhoto, setCurlingPhoto] = useState(false);
 
   return (
     <Out>
@@ -368,6 +369,33 @@ function Hobbies() {
             <div className="ml-6 text-bone-300">
               → ISTJ 🔍
             </div>
+          )}
+
+          {h.includes("curling") && (
+            <>
+              <button
+                type="button"
+                onClick={() => setCurlingPhoto((v) => !v)}
+                className="ml-6 text-accent-cyan hover:underline"
+              >
+                {curlingPhoto ? "hide photo ↑" : "view photo →"}
+              </button>
+              {curlingPhoto && (
+                <div className="ml-6 mt-2">
+                  <div className="inline-block -rotate-2 bg-bone-50 p-3 pb-2 shadow-[0_10px_24px_rgba(0,0,0,0.45)]">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/curling.jpg"
+                      alt="curling"
+                      className="block h-48 w-48 object-cover"
+                    />
+                    <div className="mt-3 mb-1 text-center text-xs italic text-stone-700">
+                      curling 🥌 — UW Curling Club
+                    </div>
+                  </div>
+                </div>
+              )}
+            </>
           )}
         </div>
       ))}

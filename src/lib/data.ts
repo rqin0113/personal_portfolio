@@ -273,7 +273,7 @@ export const hobbies = [
 
   "🧠 psychology: personality tests...guess my MBTI type 👀 (click to reveal)",
 
-  "✈️ travel: 20+ cities across Asia, North America, and Europe. I like seeing how different places think and live"
+  "✈️ travel: 20+ cities across Asia, North America, and Europe. I love immersing myself in new cultures :3"
 ];
 
 export const values = [
