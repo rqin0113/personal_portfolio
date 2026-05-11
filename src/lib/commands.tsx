@@ -124,7 +124,6 @@ function Help({ ctx }: { ctx: Ctx }) {
 function About({ ctx }: { ctx: Ctx }) {
   return (
     <Out>
-      <Para>{profile.longBio}</Para>
       <Para className="text-bone-400">{profile.tagline}</Para>
       <div className="pt-1 text-bone-400">
         related: <CmdLink cmd="experience" ctx={ctx} /> ·{" "}
@@ -166,7 +165,6 @@ function Experience() {
               <Bullet key={j}>{b}</Bullet>
             ))}
           </div>
-          <Echo>stack: {e.stack.join(", ")}</Echo>
         </div>
       ))}
     </Out>
@@ -441,14 +439,6 @@ function Quotes() {
           {q.by && <span className="text-bone-500"> — {q.by}</span>}
         </div>
       ))}
-    </Out>
-  );
-}
-
-function AboutDeep() {
-  return (
-    <Out>
-      <Para>{profile.longBio}</Para>
     </Out>
   );
 }
@@ -730,14 +720,6 @@ const baseCommands: Command[] = [
     group: "fun",
     hidden: true,
     run: () => node(<Coffee />),
-  },
-  {
-    name: "about:deep",
-    aliases: ["about-deep"],
-    hint: "longer reflection",
-    group: "fun",
-    hidden: true,
-    run: () => node(<AboutDeep />),
   },
 ];
 

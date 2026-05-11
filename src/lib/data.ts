@@ -34,7 +34,6 @@ export type Experience = {
   location: string;
   summary: string;
   bullets: string[];
-  stack: string[];
 };
 
 export const experience: Experience[] = [
@@ -50,7 +49,6 @@ export const experience: Experience[] = [
       "Build interactive interfaces (event pages, registration flows) using React, TypeScript, and Next.js, with a focus on responsive design and state management.",
       "Contribute to the optimization of the annual CxC hackathon site — improving usability for 750+ applicants.",
     ],
-    stack: ["React", "TypeScript", "Next.js", "HTML/CSS"],
   },
   {
     company: "University of Waterloo",
@@ -63,33 +61,6 @@ export const experience: Experience[] = [
       "Studied intersection structure in high-dimensional convex sets, connecting classical results to modern optimization problems.",
       "Delivered a formal research presentation to faculty and graduate students in the Department of Combinatorics & Optimization, fielding technical questions on the proof.",
     ],
-    stack: ["Combinatorics", "Convex Geometry", "Optimization"],
-  },
-  {
-    company: "Waterloo Data Science Club",
-    role: "Social Media Coordinator",
-    period: "Dec 2025 — Apr 2026",
-    location: "Waterloo, ON",
-    summary:
-      "Led marketing strategy for 10+ AI/ML events and the annual CxC hackathon — Canada's largest student-run AI hackathon.",
-    bullets: [
-      "Grew the community to 5,500+ followers, 300+ active members, and 750+ hackathon applications.",
-      "Designed and shipped event campaigns end-to-end, from creative direction to scheduled rollout.",
-    ],
-    stack: ["Marketing", "Branding", "Community"],
-  },
-  {
-    company: "Shad Canada",
-    role: "Software Engineer",
-    period: "July 2024",
-    location: "Canada",
-    summary:
-      "Built a full-stack carbon footprint calculator with personalized green-energy recommendations.",
-    bullets: [
-      "Shipped an HTML/CSS frontend with a Python backend powered by decision-tree regression models to surface tailored sustainability suggestions.",
-      "Awarded the Exceptional Demonstration Award (top team among 10+) for technical innovation.",
-    ],
-    stack: ["Python", "Scikit-learn", "HTML", "CSS"],
   },
 ];
 
