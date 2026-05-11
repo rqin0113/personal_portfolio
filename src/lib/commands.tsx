@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 import {
   profile,
   experience,
@@ -338,10 +338,38 @@ function Contact() {
 }
 
 function Hobbies() {
+  const [mbtiRevealed, setMbtiRevealed] = useState(false);
+
   return (
     <Out>
       {hobbies.map((h, i) => (
-        <Bullet key={i}>{h}</Bullet>
+        <div key={i} className="space-y-1">
+          <Bullet
+            onClick={() => {
+              if (h.includes("psychology")) setMbtiRevealed(true);
+            }}
+            className={h.includes("psychology") ? "cursor-pointer hover:text-accent-cyan" : ""}
+          >
+            {h}
+          </Bullet>
+
+          {h.includes("Ngogo") && (
+            <a
+              href="https://maps.app.goo.gl/cLUo9M147xyzwrtBA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-6 text-accent-cyan hover:underline"
+            >
+              view on map →
+            </a>
+          )}
+
+          {h.includes("psychology") && mbtiRevealed && (
+            <div className="ml-6 text-bone-300">
+              → ISTJ 🔍
+            </div>
+          )}
+        </div>
       ))}
     </Out>
   );

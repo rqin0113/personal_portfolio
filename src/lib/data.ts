@@ -267,11 +267,13 @@ export const now = [
 ];
 
 export const hobbies = [
-  "curling — strategy more than sweeping",
-  "long walks with a notebook",
-  "specialty coffee · v60 + medium grind",
-  "reading: math papers, design essays, sci-fi",
-  "tinkering with side projects on weekends",
+  "🥌 curling: 3+ years, TDSSAA Regional Champion (x2), UW Curling Club exec + player. strategy-heavy sport that also inspired one of my projects",
+  
+  "🍜 food + city exploration: hunting hidden gems, trying new spots, and revisiting comfort places. current obsession: Ngogo (downtown Toronto)",
+
+  "🧠 psychology: personality tests...guess my MBTI type 👀 (click to reveal)",
+
+  "✈️ travel: 20+ cities across Asia, North America, and Europe. I like seeing how different places think and live"
 ];
 
 export const values = [

@@ -84,12 +84,35 @@ export function Field({
 export function Bullet({
   children,
   marker = "·",
+  onClick,
+  className,
 }: {
   children: ReactNode;
   marker?: string;
+  onClick?: () => void;
+  className?: string;
 }) {
+  const interactive = !!onClick;
   return (
-    <div className="flex max-w-[78ch] gap-2 text-bone-200">
+    <div
+      onClick={onClick}
+      role={interactive ? "button" : undefined}
+      tabIndex={interactive ? 0 : undefined}
+      onKeyDown={
+        interactive
+          ? (e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                onClick?.();
+              }
+            }
+          : undefined
+      }
+      className={cn(
+        "flex max-w-[78ch] gap-2 text-bone-200",
+        className
+      )}
+    >
       <span className="select-none text-bone-500">{marker}</span>
       <span className="whitespace-pre-wrap">{children}</span>
     </div>
