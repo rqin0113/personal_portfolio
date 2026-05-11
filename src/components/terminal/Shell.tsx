@@ -9,6 +9,7 @@ import {
   useState,
 } from "react";
 import { findCommand, suggestionsFor } from "@/lib/commands";
+import { PhotoRoll } from "./PhotoRoll";
 
 type Entry = {
   id: number;
@@ -25,6 +26,7 @@ export function Shell() {
   const [histIdx, setHistIdx] = useState<number | null>(null);
   const [bufferedInput, setBufferedInput] = useState("");
   const [hint, setHint] = useState<string | null>(null);
+  const [photoOpen, setPhotoOpen] = useState(false);
 
   const inputRef = useRef<HTMLInputElement>(null);
   const viewportRef = useRef<HTMLDivElement>(null);
@@ -192,9 +194,10 @@ export function Shell() {
   };
 
   return (
-    <div className="window-shadow mx-auto flex h-[780px] max-w-[900px] flex-col overflow-hidden bg-ink-100 font-mono text-bone-200 sm:h-[calc(100svh-2.5rem)] sm:rounded-xl lg:h-[calc(100svh-3.5rem)]">
+    <div className="window-shadow relative mx-auto flex h-[780px] max-w-[900px] flex-col overflow-hidden bg-ink-100 font-mono text-bone-200 sm:h-[calc(100svh-2.5rem)] sm:rounded-xl lg:h-[calc(100svh-3.5rem)]">
       <TitleBar />
       <TabBar />
+      <PhotoRoll open={photoOpen} onClose={() => setPhotoOpen(false)} />
 
       <div
         ref={viewportRef}
@@ -202,7 +205,10 @@ export function Shell() {
         onClick={focusInput}
       >
         <div className="relative z-10 mx-auto max-w-[80ch]">
-          <Banner runCommand={runCommand} />
+          <Banner
+            runCommand={runCommand}
+            onOpenPhotos={() => setPhotoOpen(true)}
+          />
 
           {entries.map((e) => (
             <div key={e.id} className="mt-3">
@@ -288,7 +294,13 @@ function Tab({ children }: { children: ReactNode }) {
   );
 }
 
-function Banner({ runCommand }: { runCommand: (cmd: string) => void }) {
+function Banner({
+  runCommand,
+  onOpenPhotos,
+}: {
+  runCommand: (cmd: string) => void;
+  onOpenPhotos: () => void;
+}) {
   return (
     <div className="space-y-3 pb-3">
       <p className="text-bone-100">Hey! I'm Riza 😊 </p>
@@ -297,6 +309,14 @@ function Banner({ runCommand }: { runCommand: (cmd: string) => void }) {
       </p>
       <p className="text-bone-300">I enjoy building things that bridge my interests with real-world problems - from AI-powered backend systems to interactive user experiences. Always learning, experimenting, and open to meaningful conversations 💬 </p>
       <p className="text-bone-300">Welcome to my terminal-inspired portfolio - a small space to explore what I've been building, thinking about, and enjoying lately :) </p>
+      <p className="text-bone-400">
+        <button
+          onClick={onOpenPhotos}
+          className="text-accent-amber underline underline-offset-2 hover:text-accent-lime"
+        >
+          📷 view photo roll →
+        </button>
+      </p>
       <p className="text-bone-400">
         For a list of available commands, type{" "}
         <button
