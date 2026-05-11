@@ -231,7 +231,7 @@ export const music: Track[] = [
 ];
 
 export const quotes: { text: string; by?: string }[] = [
-  { text: "What I cannot create, I do not understand.", by: "Feynman" },
-  { text: "The best way to predict the future is to invent it.", by: "Kay" },
-  { text: "Make it work, make it right, make it fast.", by: "Knuth" },
+  { text: "for whatever we lose (like a you or a me) it's always ourselves we find in the sea", by: "E.E. Cummings" },
+  { text: "a ship is safe in harbor, but that's not what ships are for", by: "John A. Shedd " },
+  { text: "miles to go before I sleep 🌙", by: "Robert Frost" },
 ];
