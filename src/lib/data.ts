@@ -208,8 +208,6 @@ export const skills: Skill[] = [
 ];
 
 export const terminalLines: { user?: string; system?: string }[] = [
-  { user: "whoami" },
-  { system: "riza qin · b.math @ uw · builder" },
   { user: "cat ./about.md | head -1" },
   { system: "full-stack · applied AI · data — shipping real things" },
   { user: "uptime" },

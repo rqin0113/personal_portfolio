@@ -192,7 +192,7 @@ export function Shell() {
   };
 
   return (
-    <div className="window-shadow mx-auto flex h-[100svh] max-w-[1100px] flex-col overflow-hidden bg-ink-100 font-mono text-bone-200 sm:h-[calc(100svh-2.5rem)] sm:rounded-xl lg:h-[calc(100svh-3.5rem)]">
+    <div className="window-shadow mx-auto flex h-[780px] max-w-[900px] flex-col overflow-hidden bg-ink-100 font-mono text-bone-200 sm:h-[calc(100svh-2.5rem)] sm:rounded-xl lg:h-[calc(100svh-3.5rem)]">
       <TitleBar />
       <TabBar />
 
@@ -291,12 +291,12 @@ function Tab({ children }: { children: ReactNode }) {
 function Banner({ runCommand }: { runCommand: (cmd: string) => void }) {
   return (
     <div className="space-y-3 pb-3">
-      <p className="text-bone-100">Hi there! I&apos;m Riza 😊 </p>
+      <p className="text-bone-100">Hey! I'm Riza 😊 </p>
       <p className="max-w-[78ch] text-bone-300">
-        2A Honours Mathematics student @ University of Waterloo exploring full-stack dev, applied AI, and data science.
+        2A Honours Mathematics student @ University of Waterloo interested in full-stack development, applied AI engineering, and data science 👩🏻‍💻
       </p>
-      <p className="text-bone-300">I enjoy building things, learning fast, and turning ideas into real systems. Always open to new opportunities and good conversations! 🤝 </p>
-      <p className="text-bone-300">Welcome to my terminal-inspired portfolio! </p>
+      <p className="text-bone-300">I enjoy building things that bridge my interests with real-world problems - from AI-powered backend systems to interactive user experiences. Always learning, experimenting, and open to meaningful conversations 💬 </p>
+      <p className="text-bone-300">Welcome to my terminal-inspired portfolio - a small space to explore what I've been building, thinking about, and enjoying lately :) </p>
       <p className="text-bone-400">
         For a list of available commands, type{" "}
         <button

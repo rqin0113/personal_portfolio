@@ -123,19 +123,6 @@ function Help({ ctx }: { ctx: Ctx }) {
   );
 }
 
-function Whoami() {
-  return (
-    <Out>
-      <div className="text-bone-100">
-        {profile.name.toLowerCase().replace(/\s+/g, "_")}
-      </div>
-      <Echo>
-        {profile.role.toLowerCase()} · {profile.location.toLowerCase()}
-      </Echo>
-    </Out>
-  );
-}
-
 function About({ ctx }: { ctx: Ctx }) {
   return (
     <Out>
@@ -401,7 +388,7 @@ function Life({ ctx }: { ctx: Ctx }) {
       <Para>{profile.longBio}</Para>
       <Para className="text-bone-300">
         Curious by default. Math major. I keep ending up at the seam between a
-        model and a UI — that&apos;s the thing I want to spend the next few
+        model and a UI — that's the thing I want to spend the next few
         years getting really good at.
       </Para>
       <Echo>
@@ -555,12 +542,6 @@ const baseCommands: Command[] = [
     hint: "clear the screen",
     group: "core",
     run: () => ({ kind: "clear" }),
-  },
-  {
-    name: "whoami",
-    hint: "identity, briefly",
-    group: "about",
-    run: () => node(<Whoami />),
   },
   {
     name: "about",
