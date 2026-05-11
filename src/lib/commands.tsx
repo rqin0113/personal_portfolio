@@ -10,7 +10,6 @@ import {
   hobbies,
   music,
   quotes,
-  aboutDeep,
   type Project,
 } from "./data";
 import {
@@ -449,7 +448,7 @@ function Quotes() {
 function AboutDeep() {
   return (
     <Out>
-      <Para>{aboutDeep}</Para>
+      <Para>{profile.longBio}</Para>
     </Out>
   );
 }

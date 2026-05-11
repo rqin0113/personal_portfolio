@@ -1,3 +1,5 @@
+// ---- identity ----
+
 export const profile = {
   name: "Riza Qin",
   role: "Software Developer | AI Engineer | Data Scientist",
@@ -6,18 +8,24 @@ export const profile = {
   email: "r32qin@uwaterloo.ca",
   github: "github.com/rqin0113",
   linkedin: "linkedin.com/in/riza-qin",
+  tagline: "full-stack · applied AI · data — shipping real things",
 };
 
-export type NavLink = { label: string; href: string; index: string };
+// ---- academics ----
 
-export const navLinks: NavLink[] = [
-  { label: "Index", href: "#hero", index: "00" },
-  { label: "About", href: "#about", index: "01" },
-  { label: "Experience", href: "#experience", index: "02" },
-  { label: "Work", href: "#work", index: "03" },
-  { label: "Stack", href: "#stack", index: "04" },
-  { label: "Contact", href: "#contact", index: "05" },
-];
+export const education = {
+  school: "University of Waterloo",
+  degree: "Bachelor of Mathematics",
+  period: "Sep 2025 — Apr 2030",
+  gpa: "89.2%",
+  coursework: [
+    "Data Structures & Algorithms",
+    "Introduction to Python (91%)",
+    "Probability & Statistics",
+  ],
+};
+
+// ---- work ----
 
 export type Experience = {
   company: string;
@@ -207,57 +215,7 @@ export const skills: Skill[] = [
   },
 ];
 
-export const terminalLines: { user?: string; system?: string }[] = [
-  { user: "cat ./about.md | head -1" },
-  { system: "full-stack · applied AI · data — shipping real things" },
-  { user: "uptime" },
-  { system: "online · seeking fall 2026 co-op" },
-];
-
-// Node graph topology — used in hero
-export const graphNodes: { id: string; label: string; x: number; y: number; tone: "cyan" | "violet" | "lime" | "amber" | "rose" | "bone" }[] = [
-  { id: "core", label: "you", x: 50, y: 50, tone: "cyan" },
-  { id: "ai", label: "AI", x: 18, y: 22, tone: "violet" },
-  { id: "fs", label: "fullstack", x: 84, y: 26, tone: "cyan" },
-  { id: "rt", label: "realtime", x: 88, y: 70, tone: "lime" },
-  { id: "data", label: "data", x: 14, y: 74, tone: "amber" },
-  { id: "math", label: "math", x: 50, y: 8, tone: "rose" },
-  { id: "ux", label: "ux", x: 50, y: 92, tone: "bone" },
-];
-
-export const graphEdges: [string, string][] = [
-  ["core", "ai"],
-  ["core", "fs"],
-  ["core", "rt"],
-  ["core", "data"],
-  ["core", "math"],
-  ["core", "ux"],
-  ["ai", "math"],
-  ["fs", "rt"],
-  ["data", "ux"],
-  ["ai", "data"],
-];
-
-export const stats = [
-  { label: "GPA", value: "89.2%" },
-  { label: "Python coursework", value: "91%" },
-  { label: "community reached", value: "5.5k+" },
-  { label: "CxC applicants", value: "750+" },
-];
-
-// ---- personality layer ----
-
-export const education = {
-  school: "University of Waterloo",
-  degree: "Bachelor of Mathematics",
-  period: "Sep 2025 — Apr 2030",
-  gpa: "89.2%",
-  coursework: [
-    "Data Structures & Algorithms",
-    "Introduction to Python (91%)",
-    "Probability & Statistics",
-  ],
-};
+// ---- personal ----
 
 export const now = [
   "shipping SocialScript at Hack The Globe",
@@ -268,37 +226,12 @@ export const now = [
 
 export const hobbies = [
   "🥌 curling: 3+ years, TDSSAA Regional Champion (x2), UW Curling Club exec + player. strategy-heavy sport that also inspired one of my projects",
-  
+
   "🍜 food + city exploration: hunting hidden gems, trying new spots, and revisiting comfort places. current obsession: Ngogo (downtown Toronto)",
 
   "🧠 psychology: personality tests...guess my MBTI type 👀 (click to reveal)",
 
-  "✈️ travel: 20+ cities across Asia, North America, and Europe. I love immersing myself in new cultures :3"
-];
-
-export const values = [
-  { k: "ship", v: "A real artifact in users' hands beats a polished plan." },
-  { k: "read the source", v: "Implementation teaches the failure modes faster than docs." },
-  { k: "latency is a feature", v: "The interface is the product; everything else is plumbing." },
-  { k: "clarity > cleverness", v: "If a teammate can't read it tomorrow, it's not done." },
-];
-
-export const human = [
-  "math student who codes more than the average math student.",
-  "happiest at the seam between a model and a UI.",
-  "learns by building things end-to-end and breaking them on purpose.",
-  "type to talk → 'contact'. say hi.",
-];
-
-export const aboutDeep =
-  "I grew up curious about systems — how cities route water, how a curling stone rotates, how a model decides what to say next. Math at Waterloo gave me a vocabulary for some of that; building things online gave me a place to keep asking. I'm most interested in the engineering work that sits one layer beneath a model — orchestration, evaluation, the data plumbing that makes the magic reproducible. I want to spend the next few years working with people who care about getting that layer right.";
-
-export const easterCommands = [
-  "sudo hire-me",
-  "system-status",
-  "neural-network",
-  "coffee",
-  "about:deep",
+  "✈️ travel: 20+ cities across Asia, North America, and Europe. I like seeing how different places think and live",
 ];
 
 export type Track = { title: string; artist: string; url: string };
