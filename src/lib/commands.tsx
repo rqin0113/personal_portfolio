@@ -7,10 +7,9 @@ import {
   projects,
   skills,
   education,
-  now as nowItems,
   hobbies,
-  values,
-  human,
+  music,
+  quotes,
   aboutDeep,
   type Project,
 } from "./data";
@@ -338,17 +337,6 @@ function Contact() {
   );
 }
 
-function Now() {
-  return (
-    <Out>
-      <Echo>currently</Echo>
-      {nowItems.map((n, i) => (
-        <Bullet key={i}>{n}</Bullet>
-      ))}
-    </Out>
-  );
-}
-
 function Hobbies() {
   return (
     <Out>
@@ -359,42 +347,45 @@ function Hobbies() {
   );
 }
 
-function Values() {
+function Music() {
   return (
     <Out>
-      {values.map((v) => (
-        <div key={v.k} className="max-w-[78ch]">
-          <span className="text-bone-100">{v.k}.</span>{" "}
-          <span className="text-bone-300">{v.v}</span>
+      <Echo>tracks on rotation</Echo>
+      <div className="pt-1">
+        {music.map((t, i) => (
+          <div key={i} className="whitespace-pre">
+            <span className="text-bone-500">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+            {"  "}
+            <span className="text-bone-100">{t.title}</span>
+            <span className="text-bone-500"> · </span>
+            <span className="text-bone-300">{t.artist}</span>
+            {"   "}
+            <a
+              href={t.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent-cyan underline-offset-2 hover:underline"
+            >
+              ↗ play
+            </a>
+          </div>
+        ))}
+      </div>
+    </Out>
+  );
+}
+
+function Quotes() {
+  return (
+    <Out className="space-y-2">
+      {quotes.map((q, i) => (
+        <div key={i} className="max-w-[78ch]">
+          <span className="text-bone-200">&ldquo;{q.text}&rdquo;</span>
+          {q.by && <span className="text-bone-500"> — {q.by}</span>}
         </div>
       ))}
-    </Out>
-  );
-}
-
-function Human() {
-  return (
-    <Out>
-      {human.map((h, i) => (
-        <Para key={i}>{h}</Para>
-      ))}
-    </Out>
-  );
-}
-
-function Life({ ctx }: { ctx: Ctx }) {
-  return (
-    <Out>
-      <Para>{profile.longBio}</Para>
-      <Para className="text-bone-300">
-        Curious by default. Math major. I keep ending up at the seam between a
-        model and a UI — that's the thing I want to spend the next few
-        years getting really good at.
-      </Para>
-      <Echo>
-        related: <CmdLink cmd="hobbies" ctx={ctx} /> ·{" "}
-        <CmdLink cmd="now" ctx={ctx} /> · <CmdLink cmd="values" ctx={ctx} />
-      </Echo>
     </Out>
   );
 }
@@ -632,41 +623,26 @@ const baseCommands: Command[] = [
     }),
   },
 
-  // human layer
+  // personal
 
-  /*
-  {
-    name: "now",
-    hint: "what i'm doing right now",
-    group: "human",
-    run: () => node(<Now />),
-  },
   {
     name: "hobbies",
     hint: "off-keyboard interests",
-    group: "human",
+    group: "personal",
     run: () => node(<Hobbies />),
   },
   {
-    name: "values",
-    aliases: ["principles"],
-    hint: "operating principles",
-    group: "human",
-    run: () => node(<Values />),
+    name: "music",
+    hint: "tracks on rotation",
+    group: "personal",
+    run: () => node(<Music />),
   },
   {
-    name: "human",
-    hint: "the non-engineer view",
-    group: "human",
-    run: () => node(<Human />),
+    name: "quotes",
+    hint: "lines i keep coming back to",
+    group: "personal",
+    run: () => node(<Quotes />),
   },
-  {
-    name: "life",
-    hint: "longer narrative",
-    group: "human",
-    run: (_a, ctx) => node(<Life ctx={ctx} />),
-  },
-  */
 
   // hidden
   {

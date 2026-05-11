@@ -298,3 +298,34 @@ export const easterCommands = [
   "coffee",
   "about:deep",
 ];
+
+export type Track = { title: string; artist: string; url: string };
+
+export const music: Track[] = [
+  {
+    title: "Drop Dead",
+    artist: "Olivia Rodrigo",
+    url: "https://open.spotify.com/track/6gkbtMtioHgtyGjrMel6ei?si=df80e73fab4c417e",
+  },
+  {
+    title: "Handlebars",
+    artist: "JENNIE, Dua Lipa",
+    url: "https://open.spotify.com/track/08dD8Lk7VUea38YnsMzOP7?si=2864504d6bbc44ec",
+  },
+  {
+    title: "Hampstead",
+    artist: "Ariana Grande",
+    url: "https://open.spotify.com/track/4D2DFuqs2PwLiHbcf6CX47?si=2d7a5b84b61d4139",
+  },
+  {
+    title: "Packing It Up",
+    artist: "Gracie Abrams",
+    url: "https://open.spotify.com/track/0D89q3d3eclowHBcDQZ4qn?si=46a5c4cc4d064b0c",
+  },
+];
+
+export const quotes: { text: string; by?: string }[] = [
+  { text: "What I cannot create, I do not understand.", by: "Feynman" },
+  { text: "The best way to predict the future is to invent it.", by: "Kay" },
+  { text: "Make it work, make it right, make it fast.", by: "Knuth" },
+];
