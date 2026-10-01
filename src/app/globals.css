@@ -436,6 +436,7 @@ body {
 .experience-detail-links a,
 .experience-photo-link {
   display: inline-flex;
+  max-width: 100%;
   align-items: center;
   gap: 7px;
   padding: 8px 11px;
@@ -445,6 +446,7 @@ body {
   cursor: pointer;
   font-size: 11px;
   text-decoration: none;
+  text-align: left;
   transition: border-color 160ms ease, background 160ms ease;
 }
 
@@ -710,8 +712,19 @@ body {
   background: #080908;
 }
 
+.photo-popup-landscape .photo-popup-frame {
+  height: auto;
+  aspect-ratio: 4 / 3;
+  max-height: min(62vh, 600px);
+}
+
 .photo-popup-image {
   object-fit: contain;
+}
+
+.photo-popup-image-landscape {
+  object-fit: cover;
+  object-position: center bottom;
 }
 
 .terminal-song-list a {
