@@ -76,6 +76,20 @@ export function ExperienceCards() {
                 <li key={bullet}>{bullet}</li>
               ))}
             </ul>
+            {selected.links && selected.links.length > 0 && (
+              <div className="experience-detail-links">
+                {selected.links.map((link) => (
+                  <a
+                    href={link.href}
+                    key={link.label}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {link.label} <span aria-hidden="true">↗</span>
+                  </a>
+                ))}
+              </div>
+            )}
           </>
         )}
       </section>

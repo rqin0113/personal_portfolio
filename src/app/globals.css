@@ -426,6 +426,30 @@ body {
   color: #a4b888;
 }
 
+.experience-detail-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.experience-detail-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 11px;
+  border: 1px solid rgba(164, 184, 136, 0.34);
+  color: #c9d9b1;
+  font-size: 11px;
+  text-decoration: none;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.experience-detail-links a:hover {
+  border-color: #a4b888;
+  background: rgba(164, 184, 136, 0.08);
+}
+
 .terminal-panel {
   margin: 8px 0 70px;
   border-top: 1px solid rgba(255, 255, 255, 0.13);
