@@ -2,20 +2,21 @@
 
 export const profile = {
   name: "Riza Qin",
-  role: "Software Developer | AI Engineer | Data Scientist",
+  role: "Computer Science + Finance student",
   location: "Waterloo/Toronto, ON",
-  status: "Seeking Fall 2026 Co-op Internships",
+  status: "Software · machine learning · finance",
   email: "r32qin@uwaterloo.ca",
   github: "github.com/rqin0113",
   linkedin: "linkedin.com/in/riza-qin",
-  tagline: "full-stack · applied AI · data — shipping real things",
+  tagline:
+    "Computer Science + Finance student at the University of Waterloo, interested in software, machine learning, and finance.",
 };
 
 // ---- academics ----
 
 export const education = {
   school: "University of Waterloo",
-  degree: "Bachelor of Mathematics",
+  degree: "Computer Science + Finance",
   period: "Sep 2025 — Apr 2030",
   gpa: "89.2%",
   coursework: [
@@ -31,35 +32,38 @@ export type Experience = {
   company: string;
   role: string;
   period: string;
-  location: string;
-  summary: string;
-  bullets: string[];
+  location?: string;
+  summary?: string;
+  bullets?: string[];
 };
 
 export const experience: Experience[] = [
   {
-    company: "Waterloo Data Science Club",
-    role: "Software Developer",
-    period: "Apr 2026 — Present",
+    company: "OpenText",
+    role: "Software Test Engineer",
+    period: "Sep 2026 — Present",
     location: "Waterloo, ON",
-    summary:
-      "Building scalable frontend features and dynamic UI components for one of the largest academic clubs on campus.",
     bullets: [
-      "Develop and maintain web features supporting 300+ members and large-scale student events.",
-      "Build interactive interfaces (event pages, registration flows) using React, TypeScript, and Next.js, with a focus on responsive design and state management.",
-      "Contribute to the optimization of the annual CxC hackathon site — improving usability for 750+ applicants.",
+      "Run workload-based performance tests for Content Server to identify bottlenecks.",
+      "Validate decoupled frontend and backend components, and use SQL for test validation and performance analysis.",
     ],
   },
   {
-    company: "University of Waterloo",
-    role: "Mathematics Researcher",
-    period: "Dec 2025 — Mar 2026",
-    location: "Waterloo, ON",
-    summary:
-      "Researched Helly's Theorem under Dr. Mathieu Rundström — intersection properties in high-dimensional geometry with applications to optimization.",
+    company: "Wat.AI",
+    role: "ML / Software Engineer",
+    period: "May 2026 — Present",
     bullets: [
-      "Studied intersection structure in high-dimensional convex sets, connecting classical results to modern optimization problems.",
-      "Delivered a formal research presentation to faculty and graduate students in the Department of Combinatorics & Optimization, fielding technical questions on the proof.",
+      "Built Weatherloo to compare HRRR, ECMWF, and other forecasts with observations from Waterloo and Toronto Pearson Airport.",
+      "Integrated CNN-LSTM and LSTM bias correction, and built a React interface for forecast accuracy and corrected temperature and wind predictions.",
+    ],
+  },
+  {
+    company: "Waterloo Data Science Club",
+    role: "Software Developer",
+    period: "Apr 2026 — Present",
+    bullets: [
+      "Build responsive React, TypeScript, and Next.js features—including event pages and registration—for a 300+ member club.",
+      "Contribute to the CxC hackathon website, serving 750+ applicants.",
     ],
   },
 ];
@@ -189,10 +193,9 @@ export const skills: Skill[] = [
 // ---- personal ----
 
 export const now = [
-  "shipping SocialScript at Hack The Globe",
+  "working across software testing, development, and machine learning",
   "refining the Curling Shot Advisor",
-  "reading about Helly's Theorem and high-dimensional intersections",
-  "applying for fall 2026 SWE / AI co-ops",
+  "building projects that connect software and real-world problems",
 ];
 
 export const hobbies = [
@@ -209,24 +212,19 @@ export type Track = { title: string; artist: string; url: string };
 
 export const music: Track[] = [
   {
+    title: "nowhere, nobody",
+    artist: "Ariana Grande",
+    url: "https://open.spotify.com/search/nowhere%2C%20nobody%20Ariana%20Grande",
+  },
+  {
     title: "Drop Dead",
     artist: "Olivia Rodrigo",
-    url: "https://open.spotify.com/track/6gkbtMtioHgtyGjrMel6ei?si=df80e73fab4c417e",
+    url: "https://open.spotify.com/track/6gkbtMtioHgtyGjrMel6ei",
   },
   {
-    title: "Handlebars",
-    artist: "JENNIE, Dua Lipa",
-    url: "https://open.spotify.com/track/08dD8Lk7VUea38YnsMzOP7?si=2864504d6bbc44ec",
-  },
-  {
-    title: "Hampstead",
-    artist: "Ariana Grande",
-    url: "https://open.spotify.com/track/4D2DFuqs2PwLiHbcf6CX47?si=2d7a5b84b61d4139",
-  },
-  {
-    title: "Packing It Up",
-    artist: "Gracie Abrams",
-    url: "https://open.spotify.com/track/0D89q3d3eclowHBcDQZ4qn?si=46a5c4cc4d064b0c",
+    title: "Dream",
+    artist: "LISA",
+    url: "https://open.spotify.com/search/Dream%20LISA",
   },
 ];
 

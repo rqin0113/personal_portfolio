@@ -158,10 +158,11 @@ function Experience() {
             <span className="text-bone-200">{e.company}</span>
           </div>
           <Echo>
-            {e.period} · {e.location}
+            {e.period}
+            {e.location ? ` · ${e.location}` : ""}
           </Echo>
           <div className="mt-1 space-y-0.5">
-            {e.bullets.map((b, j) => (
+            {(e.bullets ?? []).map((b, j) => (
               <Bullet key={j}>{b}</Bullet>
             ))}
           </div>
@@ -588,7 +589,7 @@ const baseCommands: Command[] = [
   {
     name: "education",
     aliases: ["edu", "school"],
-    hint: "uwaterloo · b.math",
+    hint: "uwaterloo · cs + finance",
     group: "about",
     run: () => node(<Education />),
   },
