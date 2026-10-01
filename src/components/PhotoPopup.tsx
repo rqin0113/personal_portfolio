@@ -8,13 +8,11 @@ export function PhotoPopup({
   alt,
   label,
   className,
-  cropToLandscape = false,
 }: {
   src: string;
   alt: string;
   label: string;
   className?: string;
-  cropToLandscape?: boolean;
 }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const titleId = useId();
@@ -30,7 +28,7 @@ export function PhotoPopup({
       </button>
       <dialog
         ref={dialogRef}
-        className={`photo-popup${cropToLandscape ? " photo-popup-landscape" : ""}`}
+        className="photo-popup"
         aria-labelledby={titleId}
         onClick={(event) => {
           if (event.target === event.currentTarget) {
@@ -56,7 +54,7 @@ export function PhotoPopup({
               alt={alt}
               fill
               sizes="(max-width: 720px) 88vw, 760px"
-              className={`photo-popup-image${cropToLandscape ? " photo-popup-image-landscape" : ""}`}
+              className="photo-popup-image"
             />
           </div>
         </div>
