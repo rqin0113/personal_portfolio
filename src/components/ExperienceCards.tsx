@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { PhotoPopup } from "@/components/PhotoPopup";
 import { experience } from "@/lib/data";
 
 export function ExperienceCards() {
@@ -88,6 +89,16 @@ export function ExperienceCards() {
                     {link.label} <span aria-hidden="true">↗</span>
                   </a>
                 ))}
+              </div>
+            )}
+            {selected.company === "OpenText" && (
+              <div className="experience-detail-links">
+                <PhotoPopup
+                  src="/opentext-first-coop.jpg"
+                  alt="Riza with her OpenText co-op team"
+                  label="Enjoying my first co-op! ↗"
+                  className="experience-photo-link"
+                />
               </div>
             )}
           </>
