@@ -96,8 +96,9 @@ export function ExperienceCards() {
                 <PhotoPopup
                   src="/opentext-first-coop.jpg"
                   alt="Riza with her OpenText co-op team"
-                  label="Enjoying my first co-op! ↗"
+                  label="Not only build products but also friendships ↗"
                   className="experience-photo-link"
+                  cropToLandscape
                 />
               </div>
             )}
