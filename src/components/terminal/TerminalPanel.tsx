@@ -73,7 +73,7 @@ function answerFor(id: QuestionId): ReactNode {
               target="_blank"
               rel="noopener noreferrer"
             >
-              See a curling photo ↗
+              My curling team ↗
             </a>
           </li>
           <li>Finding good food and exploring new cities.</li>
