@@ -49,7 +49,7 @@ export const experience: Experience[] = [
     ],
   },
   {
-    company: "Wat.AI",
+    company: "WAT.ai",
     role: "ML / Software Engineer",
     period: "May 2026 — Present",
     bullets: [
