@@ -24,7 +24,6 @@ const grotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: `${profile.name} — ${profile.role}`,
   description: profile.tagline,
-  metadataBase: new URL("https://example.com"),
   openGraph: {
     title: `${profile.name} — ${profile.role}`,
     description: profile.tagline,
@@ -33,7 +32,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#05060a",
+  themeColor: "#0a0a0a",
   colorScheme: "dark",
 };
 
@@ -47,11 +46,7 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${jetbrains.variable} ${grotesk.variable}`}
     >
-      <body className="bg-[var(--bg)] text-bone-100 antialiased">
-        <div className="desktop-bg min-h-[100svh] p-0 sm:p-5 lg:p-7">
-          {children}
-        </div>
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
