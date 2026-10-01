@@ -48,14 +48,6 @@ body {
   max-width: 820px;
 }
 
-.intro-kicker {
-  margin: 0 0 16px !important;
-  color: #a4b888 !important;
-  font-size: 10px !important;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-}
-
 .intro h1 {
   margin: 0 0 16px;
   color: #f7f5f3;
@@ -689,10 +681,6 @@ body {
 
   .intro p {
     font-size: 16px;
-  }
-
-  .intro-kicker {
-    font-size: 9px !important;
   }
 
   .social-links {

@@ -30,7 +30,6 @@ export default function Home() {
     <main className="portfolio">
       <header className="intro">
         <div className="intro-copy">
-          <p className="intro-kicker">SOFTWARE · AI · FINANCE</p>
           <h1>{profile.name}<span className="name-period">.</span></h1>
           <p>
             I&apos;m studying <em>Computer Science + Finance</em> at the University
