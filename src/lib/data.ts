@@ -35,6 +35,7 @@ export type Experience = {
   location?: string;
   summary?: string;
   bullets?: string[];
+  links?: { label: string; href: string }[];
 };
 
 export const experience: Experience[] = [
@@ -52,6 +53,7 @@ export const experience: Experience[] = [
     company: "WAT.ai",
     role: "ML / Software Engineer",
     period: "May 2026 — Present",
+    links: [{ label: "Weatherloo", href: "https://weatherloo-internal.vercel.app/" }],
     bullets: [
       "Built Weatherloo to compare HRRR, ECMWF, and other forecasts with observations from Waterloo and Toronto Pearson Airport.",
       "Integrated CNN-LSTM and LSTM bias correction, and built a React interface for forecast accuracy and corrected temperature and wind predictions.",
@@ -61,6 +63,7 @@ export const experience: Experience[] = [
     company: "Waterloo Data Science Club",
     role: "Software Developer",
     period: "Apr 2026 — Present",
+    links: [{ label: "Website", href: "https://uwdatascience.ca" }],
     bullets: [
       "Build responsive React, TypeScript, and Next.js features—including event pages and registration—for a 300+ member club.",
       "Contribute to the CxC hackathon website, serving 750+ applicants.",
