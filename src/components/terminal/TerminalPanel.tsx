@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { FormEvent, ReactNode } from "react";
+import { PhotoPopup } from "@/components/PhotoPopup";
 import { music } from "@/lib/data";
 
 type QuestionId = "cfm" | "free-time" | "music";
@@ -67,14 +68,12 @@ function answerFor(id: QuestionId): ReactNode {
           <li>
             Curling!! I started in Grade 11, and during the season I&apos;m at
             Granite Club every Sunday evening.
-            <a
+            <PhotoPopup
+              src="/curling.jpg"
+              alt="Riza and her curling team at Granite Club"
+              label="See my curling team ↗"
               className="curling-photo-link"
-              href="/curling.jpg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              See my curling team ↗
-            </a>
+            />
           </li>
           <li>Finding good food and exploring new cities.</li>
           <li>Travelling and going to concerts.</li>
