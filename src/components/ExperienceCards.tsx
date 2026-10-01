@@ -34,7 +34,7 @@ export function ExperienceCards() {
                       DSC<span className="dsc-brackets">/</span>
                     </span>
                   ) : (
-                    <span className="watai-mark">wat.ai</span>
+                    <span className="watai-mark">WAT.ai</span>
                   )}
                 </span>
                 <span className="art-orbit art-orbit-one" />
