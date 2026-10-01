@@ -712,19 +712,8 @@ body {
   background: #080908;
 }
 
-.photo-popup-landscape .photo-popup-frame {
-  height: auto;
-  aspect-ratio: 4 / 3;
-  max-height: min(62vh, 600px);
-}
-
 .photo-popup-image {
   object-fit: contain;
-}
-
-.photo-popup-image-landscape {
-  object-fit: cover;
-  object-position: center bottom;
 }
 
 .terminal-song-list a {
