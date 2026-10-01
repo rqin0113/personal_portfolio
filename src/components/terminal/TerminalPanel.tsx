@@ -67,6 +67,14 @@ function answerFor(id: QuestionId): ReactNode {
           <li>
             Curling!! I started in Grade 11, and during the season I&apos;m at
             Granite Club every Sunday evening.
+            <a
+              className="curling-photo-link"
+              href="/curling.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              See a curling photo ↗
+            </a>
           </li>
           <li>Finding good food and exploring new cities.</li>
           <li>Travelling and going to concerts.</li>

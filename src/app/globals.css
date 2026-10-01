@@ -625,6 +625,18 @@ body {
   line-height: 1.7;
 }
 
+.curling-photo-link {
+  display: inline-block;
+  margin-left: 10px;
+  color: #c9d9b1;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.curling-photo-link:hover {
+  text-decoration: underline;
+}
+
 .terminal-song-list a {
   color: #c6c8c1;
   text-decoration: none;
